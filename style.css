@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #004d4d;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  color: rgba(72, 165, 228, 0.788);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+.fa{
+  margin-right:15px ;}
+
+.fa:hover{ opacity: 0.5;}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #00ffff;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+      width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+      overflow-x: hidden;
+  }
+  
+  .nav-links {
+      position: fixed;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+  
+  .nav-links li {
+      opacity: 0;
+  }
+  
+  .burger {
+      display: block;
+      cursor: pointer;
+  }
+}
+
+.nav-active {
+      transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.glass{
+  background: rgba(23, 160, 142, 0.12);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.glass-red{
+  background: rgba(255, 10, 10, 0.411);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.0px );
+  -webkit-backdrop-filter: blur( 3.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.glass-green{
+  background: rgba(9, 211, 56, 0.322);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3.0px );
+-webkit-backdrop-filter: blur( 3.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.glass-grey{
+  background: rgba( 93, 103, 103, 0.50 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3.0px );
+-webkit-backdrop-filter: blur( 3.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.glass-blue
+{
+  background: rgba( 10, 221, 234, 0.50 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3.0px );
+-webkit-backdrop-filter: blur( 3.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.form
+{
+ background-image: url("https://image.freepik.com/free-vector/coronavirus-2019-ncov-virus-background-with-disease-cells-covid-19-corona-virus-outbreaking-pandemic-medical-health-risk-concept_139523-181.jpg");
+ background-size: cover;
+  min-height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 60px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;}
+
+  .material-icons:hover{opacity: 0.5;}
+
+  /* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+}
+
+/* Left column */
+.column.left {
+  width: 40%;
+}
+/*  right column */
+.column.right {
+   width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media  (max-width: 600px) {
+  .column.left {
+    width: 100%;
+  }
+}
+@media  (max-width: 600px) {
+  .column.right {
+    width: 100%;
+  }
+}
+.abt{
+  color:white;
+   background-image: url(https://images.unsplash.com/photo-1540228232483-1b64a7024923?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80);
+  height: 10cm; 
+   width: 23cm;
+   font-family: 'Limelight', cursive;
+   font-size: 2cm;
+}
+@media (max-width:300px)
+{.abt {
+  width: 100%;
+ }}
+
+.abtus {
+  
+  color: white; 
+  font-size: 20px; 
+  margin-left: 3cm;
+   margin-right: 2cm;
+}
+@media  (max-width: 300px) {
+  .abtus {
+    width: 100%;
+    margin-top : 0;}}
+
+.contact {
+  
+  margin-left: 3cm;
+  
+  max-width: 1000px; 
+  padding: 16px;
+  background-color: black;
+  
+}
+input[type=text], input[type=text], textarea {
+  width: 100%;
+  padding: 15px;
+  
+  margin: 10px 0 20px 0;
+ border-width:5px ;
+  border-color:#CB1B44;
+}
+
+input[type=text]:focus, input[type=text]:focus, textarea:focus{
+  background-color:black;
+  color: #f1f1f1;
+  outline: none;
+}
+.contactbtn {
+  background-color: #CB1B44;
+  color: white;
+  font-size:30px;
+  font-family:Copperplate;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+  height :60px;
+  opacity: 1;
+}
+.contactbtn:hover {
+  opacity: 0.5;
+}
+
+@media  (max-width: 300px) {
+  .contact, input[type=submit], textarea {
+    width: 100%;
+    margin-top : 0;}}
+
+
+    
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ .footer {
+  background-color:#004d4d  ;
+  padding: 15px;
+  text-align: center;
+  color:white ;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  
+}
+
+
+@media only screen and (max-width: 600px)
+ {.footer {font-size: 11px;} }
+ 
